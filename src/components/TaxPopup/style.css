@@ -1,0 +1,261 @@
+.taxPopup.popup-open {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 552px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 32px;
+    margin: 100px 0;
+}
+
+.taxPopup:not(.popup-open) {
+    display: none;
+}
+
+.taxPopup__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 27px;
+    top: 27px;
+    border: 0;
+    background-color: transparent;
+}
+
+.taxPopup__title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 40px;
+}
+
+.taxPopup__desc {
+    font-size: 14px;
+    color: #808080;
+    margin-bottom: 24px;
+    line-height: 24px;
+}
+
+.taxPopup__salaryBlock {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.taxPopup__salaryBlock label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 24px;
+}
+
+.taxPopup__salaryBlock input {
+    height: 40px;
+    padding: 8px 10px;
+    border: 1px solid #DFE3E6;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.taxPopup__salaryBlock input::placeholder {
+    color: #BEC5CC;
+}
+
+.taxPopup__salaryBlock button {
+    font-family: 'Lab Grotesque', sans-serif;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 500;
+    color: #EA0029;
+    background-color: transparent;
+    border: 0;
+    line-height: 24px;
+}
+
+.taxPopup__whatReduce {
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+    margin-bottom: 40px;
+}
+
+.taxPopup__whatReduce p {
+    font-size: 14px;
+    margin-right: 32px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.totalSum__checkbox {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #DFE3E6;
+}
+
+.totalSum__desc:not(.show) {
+    display: none;
+}
+
+.totalSum__desc.show {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.totalSum__checkbox label {
+    font-size: 14px;
+    color: #808080;
+}
+
+.totalSum__checkbox label span {
+    color: #000000;
+}
+
+.totalSum__checkbox input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.totalSum__checkbox label {
+    position: relative;
+    cursor: pointer;
+}
+
+.totalSum__checkbox label:before {
+    content:'';
+    position: relative;
+    display: inline-block;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #DFE3E6;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 11px;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+.totalSum__checkbox input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 3px;
+    height: 7px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.totalSum__checkbox input:checked + label:before {
+    border: 1px solid #FF5E56;
+    background: rgb(255,79,79);
+    background: linear-gradient(90deg, rgba(255,79,79,1) 0%, rgba(220,49,49,1) 100%);
+}
+
+/*TAG-BTNS*/
+
+.tag {
+    font-family: 'Lab Grotesque', sans-serif;
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    color: #000000;
+    margin-right: 16px;
+    background-color: #EEF0F2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.taxPopup__whatReduce input {
+    display: none;
+}
+
+.taxPopup__whatReduce input:checked + label {
+    color: #FFFFFF;
+    background: rgb(255,79,79);
+    background: linear-gradient(90deg, rgba(255,79,79,1) 0%, rgba(220,49,49,1) 100%);
+}
+
+/*TAG-BTNS*/
+
+
+.btn {
+    font-family: 'Lab Grotesque', sans-serif;
+}
+
+.btn.big-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 6px;
+    height: 56px;
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+.btn.big-btn.red-btn {
+    background: rgb(255,79,79);
+    background: linear-gradient(90deg, rgba(255,79,79,1) 0%, rgba(220,49,49,1) 100%);
+}
+
+@media (max-width: 576px) {
+
+    .taxPopup__close {
+        right: 22px;
+        top: 22px;
+    }
+
+    .btn.big-btn {
+        height: 40px;
+    }
+
+    .taxPopup__whatReduce p {
+        width: 100%;
+    }
+
+    .taxPopup__whatReduce {
+        flex-wrap: wrap;
+    }
+
+    .whatReduce__checkbox {
+        margin-top: 30px;
+    }
+
+    .taxPopup__desc {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .taxPopup__title {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 16px;
+    }
+
+    .taxPopup.popup-open {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+
+    .taxPopup__close img {
+        width: 12px;
+    }
+}
