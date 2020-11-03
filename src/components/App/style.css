@@ -12,7 +12,7 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-.taxApp.popup-close .taxPopup {
+.taxApp:not(.popup-open) .taxPopup {
     display: none;
 }
 
@@ -24,12 +24,41 @@
     display: none;
 }
 
-.taxApp.popup-close #openTaxPopup {
+.btn {
     font-family: 'Lab Grotesque', sans-serif;
-    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.taxApp:not(.popup-open) .btn.big-btn.white-btn {
+    font-family: 'Lab Grotesque', sans-serif;
     background-color: transparent;
     border: 1px solid #fff;
+}
+
+.taxApp:not(.popup-open) .btn.big-btn.white-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn.big-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #fff;
     border-radius: 6px;
-    padding: 16px 32px;
-    color: #FFFFFF;
+    height: 56px;
+    border: 1px solid transparent;
+    padding: 0 32px;
+}
+
+.btn.big-btn.red-btn {
+    background: rgb(255,79,79);
+    background: linear-gradient(90deg, rgba(255,79,79,1) 0%, rgba(220,49,49,1) 100%);
+}
+
+.btn.big-btn.red-btn:hover {
+    background: rgb(234,0,41);
+    background: linear-gradient(90deg, rgba(234,0,41,1) 0%, rgba(234,0,41,1) 100%);
 }

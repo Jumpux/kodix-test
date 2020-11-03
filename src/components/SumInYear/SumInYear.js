@@ -1,5 +1,7 @@
 import React from "react";
 
+import './style.css';
+
 const SumInYear = ({countOfYears}) => {
     return (
         <div className="taxPopup__totalSum">

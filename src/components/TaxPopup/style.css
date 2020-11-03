@@ -58,6 +58,33 @@
     border: 1px solid #DFE3E6;
     border-radius: 3px;
     margin-bottom: 8px;
+    transition: all .2s;
+}
+
+.taxPopup__salaryBlock input:hover {
+    border: 1px solid #000000;
+}
+
+.taxPopup__salaryBlock.input-error input {
+    border: 1px solid #EA0029;
+}
+
+.taxPopup__salaryBlock.input-error p {
+    display: block;
+    font-size: 14px;
+    color: #EA0029;
+    margin-top: -4px;
+    margin-bottom: 4px;
+}
+
+.taxPopup__salaryBlock span {
+    font-size: 14px;
+    margin-top: -4px;
+    margin-bottom: 4px;
+}
+
+.taxPopup__salaryBlock p {
+    display: none;
 }
 
 .taxPopup__salaryBlock input::placeholder {
@@ -73,6 +100,12 @@
     background-color: transparent;
     border: 0;
     line-height: 24px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.taxPopup__salaryBlock button:hover {
+    color: #F53A31;
 }
 
 .taxPopup__whatReduce {
@@ -87,78 +120,6 @@
     margin-right: 32px;
     font-weight: 500;
     line-height: 24px;
-}
-
-.totalSum__checkbox {
-    display: flex;
-    align-items: center;
-    padding: 16px 0;
-    border-bottom: 1px solid #DFE3E6;
-}
-
-.totalSum__desc:not(.show) {
-    display: none;
-}
-
-.totalSum__desc.show {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.totalSum__checkbox label {
-    font-size: 14px;
-    color: #808080;
-}
-
-.totalSum__checkbox label span {
-    color: #000000;
-}
-
-.totalSum__checkbox input {
-    padding: 0;
-    height: initial;
-    width: initial;
-    margin-bottom: 0;
-    display: none;
-    cursor: pointer;
-}
-
-.totalSum__checkbox label {
-    position: relative;
-    cursor: pointer;
-}
-
-.totalSum__checkbox label:before {
-    content:'';
-    position: relative;
-    display: inline-block;
-    -webkit-appearance: none;
-    background-color: transparent;
-    border: 1px solid #DFE3E6;
-    padding: 8px;
-    cursor: pointer;
-    margin-right: 11px;
-    border-radius: 6px;
-    vertical-align: middle;
-}
-
-.totalSum__checkbox input:checked + label:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 4px;
-    left: 7px;
-    width: 3px;
-    height: 7px;
-    border: solid #FFFFFF;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-.totalSum__checkbox input:checked + label:before {
-    border: 1px solid #FF5E56;
-    background: rgb(255,79,79);
-    background: linear-gradient(90deg, rgba(255,79,79,1) 0%, rgba(220,49,49,1) 100%);
 }
 
 /*TAG-BTNS*/
@@ -178,6 +139,10 @@
     transition: background .2s;
 }
 
+.tag:hover {
+    background-color: #DFE3E6;
+}
+
 .taxPopup__whatReduce input {
     display: none;
 }
@@ -189,28 +154,6 @@
 }
 
 /*TAG-BTNS*/
-
-
-.btn {
-    font-family: 'Lab Grotesque', sans-serif;
-}
-
-.btn.big-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    color: #fff;
-    border-radius: 6px;
-    height: 56px;
-    border: 1px solid transparent;
-    width: 100%;
-}
-
-.btn.big-btn.red-btn {
-    background: rgb(255,79,79);
-    background: linear-gradient(90deg, rgba(255,79,79,1) 0%, rgba(220,49,49,1) 100%);
-}
 
 @media (max-width: 576px) {
 
@@ -231,7 +174,7 @@
         flex-wrap: wrap;
     }
 
-    .whatReduce__checkbox {
+    .whatReduce__radio {
         margin-top: 30px;
     }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import TaxPopup from "../TaxPopup";
 
-import './style.css'
+import './style.css';
 
-export default class App extends React.Component {
+class App extends React.Component {
 
     state = {
         showTaxPopup: false
@@ -15,8 +15,8 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className={this.state.showTaxPopup ? 'taxApp popup-open' : 'taxApp popup-close'}>
-                <button id="openTaxPopup" onClick={() => {this.setState({showTaxPopup: !this.state.showTaxPopup})}}>
+            <div className={this.state.showTaxPopup ? 'taxApp popup-open' : 'taxApp'}>
+                <button className="btn big-btn white-btn" id="openTaxPopup" onClick={() => {this.setState({showTaxPopup: !this.state.showTaxPopup})}}>
                     Налоговый вычет
                 </button>
                 <TaxPopup
@@ -27,3 +27,5 @@ export default class App extends React.Component {
         )
     }
 }
+
+export default App;

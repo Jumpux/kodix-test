@@ -1,0 +1,76 @@
+.totalSum__checkbox {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #DFE3E6;
+}
+
+.totalSum__desc:not(.show) {
+    display: none;
+}
+
+.totalSum__desc.show {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.totalSum__checkbox label {
+    font-size: 14px;
+    color: #808080;
+}
+
+.totalSum__checkbox label span {
+    color: #000000;
+}
+
+.totalSum__checkbox input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.totalSum__checkbox label {
+    position: relative;
+    cursor: pointer;
+}
+
+.totalSum__checkbox label:before {
+    content:'';
+    position: relative;
+    display: inline-block;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #DFE3E6;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 11px;
+    border-radius: 6px;
+    vertical-align: middle;
+    transition: all .2s;
+}
+
+.totalSum__checkbox label:hover:before {
+    border: 1px solid #000000;
+}
+
+.totalSum__checkbox input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 3px;
+    height: 7px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.totalSum__checkbox input:checked + label:before {
+    border: 1px solid #FF5E56;
+    background: rgb(255,79,79);
+    background: linear-gradient(90deg, rgba(255,79,79,1) 0%, rgba(220,49,49,1) 100%);
+}
